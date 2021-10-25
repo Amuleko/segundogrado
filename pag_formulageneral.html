@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>FORMULA GENERAL</title>
+    <link rel="stylesheet" href="D:\AMULEK\Project_school\Idea_formula\style_formu.css">
+    <link rel="shortcut icon" type="image/x-icon" href="D:\AMULEK\Project_school\Idea_formula\images\logo.jpg">
+  </head>
+  <body>
+
+
+        <section>
+          <video src="D:\AMULEK\Project_school\Idea_formula\video\vid_formulageneral.mp4" autoplay muted loop>
+
+          </video>
+        </section>
+
+        <div class="recom">
+
+          <center>
+
+          <h1>No te olvides las recomendaciones dadas en la Página Principal, <br>
+          si no recuerdas cuales eran has <a href="D:\AMULEK\Project_school\Idea_formula\school_project.html">click aquí</a> </h1>
+
+          </center>
+
+        </div>
+
+        <br>
+        <br>
+        <br>
+
+
+
+<div class="formulageneral">
+
+  <h2> <center>
+
+      <script>
+      var a, b, c;
+      var outputText;
+      var result;
+
+
+
+
+
+
+
+      function validate() {
+
+
+          a = document.forms["input_form"]["aterm"].value;
+          b = document.forms["input_form"]["bterm"].value;
+          c = document.forms["input_form"]["cterm"].value;
+
+
+          if (a == 0)
+          {
+              outputText = "<em>A</em> No puede ser cero!";
+          }
+          else if (isNaN(a))
+          {
+              outputText = "<em>A</em> Debe ser un numero!";
+          }
+          else if (isNaN(b))
+          {
+              outputText = "<em>B</em> Debe ser un numero!";
+          }
+          else if (isNaN(c))
+          {
+              outputText = "<em>C</em> Debe ser un numero!";
+          }
+          else
+          {
+
+              var x1 = (-b - Math.sqrt(Math.pow(b, 2) - 4 * a * c)) / (2 * a);
+              var x2 = (-b + Math.sqrt(Math.pow(b, 2) - 4 * a * c)) / (2 * a);
+
+              result = "<br><br><strong> X <sub>1</sub> = " + (x1) + " </strong> <br><br> <strong> X <sub>2</sub> = " + (x2) + "</strong>";
+
+              outputText = "PARA LA ECUACION <strong>" + (a == 1 ? "" : a) + "x\u00B2 + " + (b == 1 ? "" : b) + "x + " + c + " = 0  </strong>" + result;
+
+              var prueba = Math.sqrt();
+
+          }
+
+
+          document.getElementById("output_text").innerHTML = outputText;
+      }
+  </script>
+
+
+  <p>INGRESE LOS COEFICIENTES DE A, B y C <br><br>
+     DE LA ECUACION CUADRATICA <strong>Ax&#x00B2; + Bx + C = 0</strong></p>
+
+  <form name="input_form" action="javascript:validate();">
+    <br><br>
+      A: <input type="text" name="aterm" size=1 maxlength="3" value="" required>
+      B: <input type="text" name="bterm" size=1 maxlength="3" value="" required>
+      C: <input type="text" name="cterm" size=1 maxlength="3" value="" required>
+      <br><br>
+
+        <input type="submit" value="Calcular">
+        <br><br>
+
+
+
+  </form>
+
+  <p id="output_text"/>
+
+
+  </h2> </center>
+
+
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+
+
+
+
+  </body>
+</html>
